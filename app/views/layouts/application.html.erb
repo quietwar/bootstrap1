@@ -7,7 +7,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
     <!-- Custom Fonts -->
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link href="path/to/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
@@ -16,9 +16,12 @@
 <!-- Custom Css -->
   	<link href="https://blackrockdigital.github.io/startbootstrap-grayscale/css/grayscale.min.css" rel="stylesheet">
 
-  <%= render 'shared/header' %>
+
  </head>
   <body>
-
+    <%= render 'shared/header' %>
+    <%= render 'shared/footer' %>
+ </body>
 
 <!-- Footer -->
+</html>

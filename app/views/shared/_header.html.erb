@@ -6,7 +6,7 @@
                   Menu <i class="fa fa-bars"></i>
               </button>
               <a class="navbar-brand page-scroll" href="#page-top">
-                  <i class="fa fa-play-circle"></i> <span class="light">Cohorts 1-5</span>
+                  <i class="fa fa-play-circle"></i> <span class="light">Cohort Projects</span>
               </a>
           </div>
 
@@ -18,21 +18,24 @@
                       <a href="#page-top"></a>
                   </li>
                   <li>
-                      <a class="page-scroll" href="Groups"></a>
+                      <a class="page-scroll" href="#Groups">Groups</a>
                   </li>
                   <li>
-                      <a class="page-scroll" href="featured App"></a>
+                      <a class="page-scroll" href="#Featured App">Freatured App</a>
                   </li>
                   <li>
-                      <a class="page-scroll" href="Awards"></a>
+                      <a class="page-scroll" href="#Awards">Awards</a>
+                  </li>
+                </ul>
+            </div>
 
-                  <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
+            <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                    <li class="active"><%= link_to "Home", root_path %></li>
                 </ul>
 
                 <ul class="nav navbar-nav nav navbar-right">
-                  <li><%= link_to "Sign up", new_user_registration_path %><li>
+                  <li><%= link_to "Sign up", new_user_registration_path %></li>
                   <li><%= link_to "Sign in", new_user_session_path %></li>
                   <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
 
@@ -40,8 +43,8 @@
                   <div clss="navbar-right">
                     <p class="navbar-text">
                     Signed in as <%= "#{current_user.email}" %>
-                  </p>
-            </div>
+                    </p>
+                  </div>
             <% end %>
                 </ul>
         </div>

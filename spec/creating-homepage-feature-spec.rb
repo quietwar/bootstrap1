@@ -5,9 +5,9 @@ RSpec.feature "Creating Home Page" do
 
     visit '/'
 
-    expect(page).to have_link('Projects')
-    expect(page).to have_link('Profiles')
-    expect(page).to have_content('Genius Projects')
-    expect(page).to have_content('Meet the Cohorts')
+    expect(page).to have_link('Sign in')
+    expect(page).to have_link('Sign up')
+    expect(page).to have_content('Sign out')
+    expect(page).to have_content('Cohort Projects')
   end
 end
