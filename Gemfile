@@ -10,7 +10,7 @@ end
 gem 'rails', '~> 5.0.2'
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3'
-gem 'pg', '~> 0.20.0'
+#gem 'pg', '~> 0.20.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
@@ -31,7 +31,9 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 3.0'
+ gem 'redis', '~> 3.0'
+ gem 'gemoji'
+ gem 'will_paginate'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -42,6 +44,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
   gem 'rspec-rails', '3.5.1'
+  gem 'pry-rails'
 end
 
 group :development do
@@ -57,6 +60,10 @@ end
 
 group :test do
   gem 'capybara', '2.7.1'
+end
+
+group :production do
+  gem 'pg', '~> 0.20.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

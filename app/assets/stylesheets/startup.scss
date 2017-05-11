@@ -6,110 +6,45 @@
 
 
 body {
-  padding-top: 80px;
-  background: #e1e1e1;
-  color: #64103F;
+padding-bottom: 80px;
+background: #e1e1e1;
+color: #64103F;
+}
+#element1 {
+  display: inline-block;
+  margin-right: 10px;
+  width: 80px;
+  text-color: green;
 }
 
+#element2 {
+  display: inline-block;
+  width: 800px;
+  text-color: red;
+}
 // Navbar styling
 .navbar {
- background: #64103F;
- padding-bottom: 20px;
+background: #64103F;
+padding-bottom: 20px;
 }
 
 .navbar-default .navbar-brand {
-  padding-top: 20px;
-  font-size: 150%;
-  font-weight: bold;
-  color: #ffffff;
+padding-top: 20px;
+font-size: 150%;
+font-weight: bold;
+color: #ffffff;
 }
 
 .navbar-default .navbar-brand:hover {
-  color: orange;
+color: orange;
 }
-
 .navbar-default {
-  border: #64103F;
+ border: #64103F;
 }
 
 .navbar-nav {
-  padding-top: 10px;
-  padding-right: 20px;
-}
-
-.navbar-default .navbar-nav li > a {
-  font-weight: bold;
-  font-size: 130%;
-  color: #ffffff;
-}
-
-.navbar-default .navbar-nav li > a:hover {
-  color: #ff0000;
-}
-
-// Form styling
-.page-heading, div > label {
-  color: #64103F;
-}
-
-.navbar-default .navbar-nav li > a:hover {
-  color: #ff0000;
-}
-
-// Form styling
-.page-heading, div > label {
-  color: #64103F;
-}
-
-// Listing articles styling
-
-.article-title {
-  font-weight: bold;
-  font-size: 2.5em;
-  margin-bottom: 0.8em;
-  padding-left: 0.7em;
-}
-
-.article-body {
-  font-size: 1.5em;
-  padding-left: 1.2em;
-  color: #64103F;
-
-}
-
-.Genius {
-  color: #64103F;
-  padding-left: 25px;
-}
-
- .article-title {
-
- }
-
-.article-detail {
-  margin-top: 20px;
-  color: #0000ff;
-}
-
-// Article Show view styling
-.article-detail-title {
-  font-size: 3em;
-  margin-bottom: 40px;
-}
-
-.article-show-body {
-  font-size: 1.5em;
-  padding-left: 0em;
-  margin-top: 15px;
-}
-
-.edit-delete {
-  margin-top: 20px;
-}
-
-// Sign up -- Sign in
-.sign-link a {
-  color: #64103F;
+ padding-top: 10px;
+ padding-right: 20px;
 }
 // Devise Error Messages
 #error_explanation {
@@ -124,27 +59,83 @@ body {
  font-size: 150%;
 }
 
-
-.navbar-nav .nav-item span {
-  display: block;
-  padding-bottom: 0.425rem;
-  padding-top: 0.425rem;
+.signed-in-user {
+  padding-top: 10px;
+  padding-right: 20px;
 }
 
-h1 {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+.form-group {
+  padding-top: 10px;
+  padding-right: 20px;
 }
 
-#messages {
-  max-height: 450px;
-  overflow-y: auto;
+.signed-in-user .navbar-test {
+  color: #ffffff;
 }
 
-  .avatar {
-    margin: 0.5rem;
-  }
+// Link styling
+.link {
+  margin-bottom: 5px;
+}
+#back-btn {
+  margin-left: -10px;
+  margin-top: 30px;
+}
+.destroy-btn:hover {
+  color: #ff0000;
+  font-weight: bold;
+  font-size: 120%;
+}
+// Chart Styling
+path {
+  stroke: steelblue; stroke-width: 2; fill: none;
+}
+.axis path, .axis line {
+    fill: none;
+    stroke: grey;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+}
+#chat-window {
+  border: 1px solid #76C95B;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+#chat-window header {
+  background: #76C95B;
+  margin-left: -15px;
+  margin-right: -15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #fff;
+  font-size: 120%;
+}
+#chat-box {
+  min-height: 100px;
+}
+#message-field {
+  width: 96%;
+}
+.message-body {
+  margin-bottom: 2px;
+}
+hr.msg {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#followers {
+  border-right: 1px solid #76C95B;
+}
+.followers {
+  margin-left: -15px;
+}
+#form-box {
+  margin-left: -15px;
+}
+#post-btn {
+  margin-right: -35px;
+}
 
-  footer {
-    color: #64103F;
-  }
+footer {
+  color: #64103F;
+}
