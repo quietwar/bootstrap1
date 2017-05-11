@@ -8,8 +8,14 @@ RSpec.feature "User signs in" do
 
   scenario "with valid credentials" do
     visit "/"
+<<<<<<< HEAD:spec/features/signing_users_in_spec.rb
 
     click_link "Sign in"
+=======
+   
+    click_link "Tap in"
+   
+>>>>>>> origin/master:spec/features/users/signing_users_in_spec.rb
     fill_in "Email", with: @john.email
     fill_in "Password",  with: @john.password
     click_button "Log in"
