@@ -6,7 +6,7 @@
                   Menu <i class="fa fa-bars"></i>
               </button>
               <a class="navbar-brand page-scroll" href="#page-top">
-                  <i class="fa fa-play-circle"></i> <span class="light">Cohort Projects</span>
+                  <%= link_to "Genius Labs", root_path, class: "navbar-brand" %>
               </a>
           </div>
 
@@ -36,8 +36,8 @@
 
                 <ul class="nav navbar-nav nav navbar-right">
                   <li><%= link_to "Sign up", new_user_registration_path %></li>
-                  <li><%= link_to "Sign in", new_user_session_path %></li>
-                  <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
+                  <li><%= link_to "Tap in", new_user_session_path %></li>
+                  <li><%= link_to "Tap out", destroy_user_session_path, method: :delete %></li>
                 </ul>
 
                   <%if user_signed_in? %>
@@ -48,7 +48,7 @@
                   </div>
                   <% end %>
               </div>
-              </ul>
+
 
           <!-- /.navbar-collapse -->
         </div>

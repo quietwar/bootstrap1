@@ -12,7 +12,7 @@ RSpec.feature "Users signout" do
    
     visit "/"
    
-    click_link "Sign in"
+    click_link "Tap in"
    
     fill_in "Email", with: @john.email
    
@@ -24,7 +24,7 @@ RSpec.feature "Users signout" do
 
     visit "/"
    
-    click_link "Sign out"
+    click_link "Tap out"
    
     expect(page).to have_content("Signed out successfully.")
    

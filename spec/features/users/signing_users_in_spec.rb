@@ -12,7 +12,7 @@ RSpec.feature "Users signin" do
    
     visit "/"
    
-    click_link "Sign in"
+    click_link "Tap in"
    
     fill_in "Email", with: @john.email
    
