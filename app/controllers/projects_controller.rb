@@ -5,11 +5,11 @@ class ProjectsController < ApplicationController
 
   def index
     @projects = current_user.projects
-    @friends = current_user.friends
+    @geniuss = current_user.genius
     set_chatroom
     @message = Message.new
     @messages = current_room.messages.reverse
-    @followers = Friendship.where(friend_id: current_user.id)
+    @followers = Friendship.where(genius_id: current_user.id)
   end
 
   def show
@@ -68,8 +68,8 @@ class ProjectsController < ApplicationController
   end
 
   def set_chatroom
-    if params[:roomId]
-      @chatroom = Chatoom.find_by(id: params[:roomId])
+    if params[:chatroomId]
+      @chatroom = Chatoom.find_by(id: params[:chatroomId])
     else
        @chatroom = current_user.room
      end
