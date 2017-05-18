@@ -1,13 +1,7 @@
-<<<<<<< HEAD
-<h2 class='text-center'>Sign up</h2>
+<h2 class='text-center'>Genius Labs</h2>
 <div class='row'>
   <div class='col-md-12'>
 
-=======
-<h2 class='text-center'>Genius Labs</h2>
-<div class='row'>
-  <div class='col-md-10'>
->>>>>>> 03e225a8cba8f3253c188bb8d72cdc1e5e2b6fe3
     <%= form_for(resource, as: resource_name,
         :html => {class: "form-horizontal", role: "form"},
         url: registration_path(resource_name)) do |f| %>
@@ -15,25 +9,16 @@
 
       <div class='form-group'>
         <div class='control-label col-md-3'>
-<<<<<<< HEAD
-          <%= f.label :email %>
-        </div>
-        <div class='col-md-9'>
-          <%= f.email_field :email, class: 'form-control',
-=======
           <%= f.label :first_name %>
         </div>
         <div class='col-md-9'>
           <%= f.text_field :first_name, class: 'form-control',
->>>>>>> 03e225a8cba8f3253c188bb8d72cdc1e5e2b6fe3
             autofocus: true %>
         </div>
       </div>
 
       <div class='form-group'>
         <div class='control-label col-md-3'>
-<<<<<<< HEAD
-=======
           <%= f.label :last_name %>
         </div>
         <div class='col-md-9'>
@@ -52,37 +37,23 @@
 
       <div class='form-group'>
         <div class='control-label col-md-3'>
->>>>>>> 03e225a8cba8f3253c188bb8d72cdc1e5e2b6fe3
           <%= f.label :password %>
         </div>
         <div class='col-md-9'>
           <%= f.password_field :password, class: 'form-control',
             autocomplete: "off" %>
           <% if @minimum_password_length %>
-<<<<<<< HEAD
           <em>(<%= @minimum_password_length %>
-=======
-            <em>(<%= @minimum_password_length %>
->>>>>>> 03e225a8cba8f3253c188bb8d72cdc1e5e2b6fe3
                                     characters minimum)</em>
           <% end %><br />
         </div>
       </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> 03e225a8cba8f3253c188bb8d72cdc1e5e2b6fe3
       <div class='form-group'>
         <div class='control-label col-md-3'>
           <%= f.label :password_confirmation %>
         </div>
         <div class='col-md-9'>
-          <%= f.password_field :password_confirmation,
-<<<<<<< HEAD
-              class: 'form-control', autocomplete: "off" %>
-=======
-                    class: 'form-control', autocomplete: "off" %>
->>>>>>> 03e225a8cba8f3253c188bb8d72cdc1e5e2b6fe3
+          <%= f.password_field :password_confirmation, class: 'form-control', autocomplete: "off" %>
         </div>
       </div>
 
@@ -94,11 +65,7 @@
     <% end %>
 
     <div class='form-group'>
-<<<<<<< HEAD
-      <div class='col-md-offset-3 col-md-9 sign-link'>
-=======
       <div class='col-md-offset-3 col-md-9'>
->>>>>>> 03e225a8cba8f3253c188bb8d72cdc1e5e2b6fe3
         <%= render "devise/shared/links" %>
       </div>
     </div>

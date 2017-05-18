@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   before_action :authenticate_user!
+  
 
 
 protected
@@ -16,7 +17,7 @@ protected
   private
 
   def chatroom
-    @room ||= Room.find(session[:chatroom]) if session[:current_room]
+    @chatroom ||= Chatoom.find(session[:chatroom]) if session[:current_room]
   end
 
   helper_method :chatroom

@@ -69,11 +69,11 @@ class ProjectsController < ApplicationController
 
   def set_chatroom
     if params[:roomId]
-      @room = Room.find_by(id: params[:roomId])
+      @chatroom = Chatoom.find_by(id: params[:roomId])
     else
-       @room = current_user.room
+       @chatroom = current_user.room
      end
-    session[:current_room] = @room.id if @room
+    session[:current_room] = @chatroom.id if @chatroom
   end
 
   def project_params

@@ -1,17 +1,14 @@
 <!-- Navigation -->
+<header role="banner">
   <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
       <div class="container">
           <div class="navbar-header">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                   Menu <i class="fa fa-bars"></i>
               </button>
-<<<<<<< HEAD
-              <a class="navbar-brand page-scroll" href="#page-top"></a>
-=======
               <a class="navbar-brand page-scroll" href="#page-top">
-                  <%= link_to "Genius Labs", root_path, class: "navbar-brand" %>
+                  <%= link_to "Genius Labs", project_path, class: "navbar-brand" %>
               </a>
->>>>>>> 03e225a8cba8f3253c188bb8d72cdc1e5e2b6fe3
           </div>
 
           <!-- Collect the nav links, forms, and other content for toggling -->
@@ -23,32 +20,15 @@
                   </li>
                   <li> <%= link_to "chat rooms",  new_chatroom_path %></li>
                   <li>
-<<<<<<< HEAD
                       <a class="page-scroll" href="#Featured App">Featured App</a>
                   </li>
                   <li>
                       <a class="page-scroll" href="#Genius Labs">Genius Labs</a>
                   </li>
-=======
                       <a class="page-scroll" href="#Groups">Groups</a>
                   </li>
-                  <li>
-                      <a class="page-scroll" href="#Featured App">Freatured App</a>
-                  </li>
-                  <li>
-                      <a class="page-scroll" href="#Awards">Awards</a>
-                  </li>
                 </ul>
             </div>
-
-            <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                   <li class="active"><%= link_to "Home", root_path %></li>
->>>>>>> 03e225a8cba8f3253c188bb8d72cdc1e5e2b6fe3
-                </ul>
-            </div>
-
-<<<<<<< HEAD
 
             <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav">
@@ -72,28 +52,10 @@
                 <% end %>
               </div>
 
-=======
-                <ul class="nav navbar-nav nav navbar-right">
-                  <li><%= link_to "Sign up", new_user_registration_path %></li>
-                  <li><%= link_to "Tap in", new_user_session_path %></li>
-                  <li><%= link_to "Tap out", destroy_user_session_path, method: :delete %></li>
-                </ul>
-
-                  <%if user_signed_in? %>
-                  <div clss="navbar-right">
-                    <p class="navbar-text">
-                    Signed in as <%= "#{current_user.email}" %>
-                    </p>
-                  </div>
-                  <% end %>
-              </div>
-
-
->>>>>>> 03e225a8cba8f3253c188bb8d72cdc1e5e2b6fe3
           <!-- /.navbar-collapse -->
         </div>
       <!-- /.container -->
   </nav>
-
+</header>
 
   <%= yield %>

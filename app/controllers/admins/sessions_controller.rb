@@ -1,6 +1,7 @@
 module Admins
   class SessionsController < Devise::RegistrationsController
-  before_action :verify_email
+    include ApplicationHelper
+  before_action :authenticate_user!
 
 
   def new
@@ -8,9 +9,9 @@ module Admins
 
   private
 
-  def verify_email
-    (redirect_to(root_path) unless current_user.email.include?('@hiddengeniusproject.org'))
-  end
+  #def verify_email
+    #(redirect_to(root_path) unless current_user.email.include?("@hiddengeniusproject.org"))
+  #end
 
 
   def sign_up_params

@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20170506215330) do
-=======
-ActiveRecord::Schema.define(version: 20170503200855) do
->>>>>>> 03e225a8cba8f3253c188bb8d72cdc1e5e2b6fe3
+ActiveRecord::Schema.define(version: 20170512005104) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,8 +42,8 @@ ActiveRecord::Schema.define(version: 20170503200855) do
   create_table "messages", force: :cascade do |t|
     t.text     "body"
     t.integer  "user_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.integer  "chatroom_id"
     t.index ["user_id"], name: "index_messages_on_user_id", using: :btree
   end
@@ -68,11 +64,6 @@ ActiveRecord::Schema.define(version: 20170503200855) do
     t.index ["user_id"], name: "index_projects_on_user_id", using: :btree
   end
 
-  create_table "startups", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "",    null: false
     t.string   "encrypted_password",     default: "",    null: false
@@ -84,18 +75,11 @@ ActiveRecord::Schema.define(version: 20170503200855) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-<<<<<<< HEAD
+    t.string   "first_name",             default: "",    null: false
+    t.string   "last_name",              default: "",    null: false
     t.datetime "created_at",                             null: false
     t.datetime "updated_at",                             null: false
     t.boolean  "admin",                  default: false
-    t.string   "first_name"
-    t.string   "last_name"
-=======
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
-    t.string   "first_name",             default: "", null: false
-    t.string   "last_name",              default: "", null: false
->>>>>>> 03e225a8cba8f3253c188bb8d72cdc1e5e2b6fe3
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end

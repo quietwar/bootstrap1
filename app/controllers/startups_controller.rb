@@ -1,4 +1,5 @@
 class StartupsController < ApplicationController
+  self.per_form_csrf_tokens = true
   def index
       @aprojects = User.paginate(:page => params[:page])
     end
@@ -8,4 +9,3 @@ class StartupsController < ApplicationController
         .paginate(:page => params[:page])
     end
   end
- 

@@ -4,7 +4,7 @@ RSpec.feature "Hiding signin link" do
   before do
     @john = User.create!(first_name: "John",
                          last_name: "Doe",
-                         email: "@hiddengeniusproject.org",
+                         email: "john@example.com",
                          password: "password")
   end
 
@@ -20,5 +20,4 @@ RSpec.feature "Hiding signin link" do
     expect(page).not_to have_link("Sign in")
     expect(page).not_to have_link("Sign up")
   end
-
 end
