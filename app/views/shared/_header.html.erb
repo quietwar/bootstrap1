@@ -6,9 +6,6 @@
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                   Menu <i class="fa fa-bars"></i>
               </button>
-              <a class="navbar-brand page-scroll" href="#page-top">
-                  <%= link_to "Genius Labs", project_path(@project), class: "navbar-brand" %>
-              </a>
           </div>
 
           <!-- Collect the nav links, forms, and other content for toggling -->
@@ -18,16 +15,10 @@
                   <li class="hidden">
                       <a href="#page-top"></a>
                   </li>
-                  <li> <%= link_to "chat rooms",  new_chatroom_path %></li>
-                  <li>
-                      <a class="page-scroll" href="#Featured App">Featured App</a>
-                  </li>
-                  <li>
-                      <a class="page-scroll" href="#Genius Labs">Genius Labs</a>
-                  </li>
-                      <a class="page-scroll" href="#Groups">Groups</a>
-                  </li>
-                </ul>
+                    <li> <%= link_to "Genius Labs", projects_path(@project) %></li>
+
+                    <li><%= link_to "Featured Genius", root_path %></li>
+              </ul>
             </div>
 
             <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
@@ -35,27 +26,11 @@
                  <li class="element1"><%= link_to "Home", root_path %></li>
                  <li class="element2"> <%= link_to "Admin", new_admin_session_path %></li>
               </ul>
-
-              <ul class="nav navbar-nav nav navbar-right">
-                <li><%= link_to "Sign up", new_user_registration_path %></li>
-                <li><%= link_to "Sign in", new_user_session_path %></li>
-                <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
-              </ul>
-
-                <%if user_signed_in? %>
-                <div clss="navbar-right">
-                  <p class="navbar-text">
-                  Signed in as <%= "#{current_user.email}" %>
-                  </p>
-                </div>
-
-                <% end %>
-              </div>
+            </div>
+        </div>
 
           <!-- /.navbar-collapse -->
-        </div>
+  <%= yield %>
       <!-- /.container -->
   </nav>
 </header>
-
-  <%= yield %>

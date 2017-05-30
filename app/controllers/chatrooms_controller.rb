@@ -5,13 +5,15 @@ class ChatroomsController < ApplicationController
   end
 
   def show
-    @chatroom = Chatroom.find(params[:id])
-    @messages = @chatroom.messages.order(created_at: :desc).limit(100).reverse
+    @chatroom = Chatroom.find(params[:user_id])
+    @messages = @chatroom.messages.order(created_at: :desc).limit(140).reverse
   end
 
   def new
+    @chatroom = Chatroom.user_id
     @chatroom = Chatroom.new
     @chatroom = @chatroom.messages.new
+
   end
 
   def create
@@ -39,6 +41,6 @@ class ChatroomsController < ApplicationController
   end
 
   def set_Chatroom
-      @chatroom = Chatroom.find(params[:project_id])
+      @chatroom = Chatroom.find(params[:user_id])
     end
 end

@@ -1,0 +1,15 @@
+
+<ul class="collection with-header">
+   <li class="collection-header"><h4><%= @chatroom.name %></h4></li>
+   <div class="content" data-behavior="messages" data-chatroom-id="<%= @chatroom.id %>" id="content">
+<% @messages.each do |message| %>
+<%= render message %>
+
+<% end %>
+</div>
+</ul>
+<%= form_for [@chatroom, Message.new] do |f| %>
+<%= f.text_field :body, autofocus: :true, class: "main_chat_form"  %>
+
+<button class="btn btn-icon btn-big right">send</button>
+<% end %>

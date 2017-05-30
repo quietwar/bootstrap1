@@ -1,0 +1,20 @@
+<%= form_for @chatroom do |f| %>
+  
+  <div class="row">
+
+  <div class="input-field col s12">
+    <label for="fenter_subject">Genius</label>
+    <div class="">
+            <%= f.select :genius, User.all - [current_user]).collect { |p| [ p.username, p.id ] } %>
+    </div>
+
+
+
+  </div>
+
+
+  <%= f.button "clapback", class: "waves-effect waves-light btn loginButton" %>
+
+</div>
+
+<% end %>

@@ -39,7 +39,7 @@
       </div>
       <br>
     <% end %>
-    <%= link_to 'New App', new_user_project_path(current_user),
+    <%= link_to 'New App', new_user_projects_path(current_user),
         class: "btn btn-success link" %>
     <%= content_tag :div, "", id: "chart", data: {apps: @projects} %>
   </div>
